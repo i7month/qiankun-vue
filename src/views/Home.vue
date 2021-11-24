@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div @click="send">我是子应用的home</div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
+  methods: {
+    send (e) {
+      console.log(this.$msg.Confirm.error)
+      this.$msg.Confirm.success({
+        type:'success',
+        message:'成功'
+      })
+      // this.$msg.Confirm.erroT({
+      //   message: "确定同意该申请？",
+      //   tips: "提示",
+      //   showCancelButton: true,
+      //   showConfirmButton: true,
+      //   onClose(action) {
+      //     console.log(action, " action");
+      //   }
+      // });
+    }
   }
 }
 </script>

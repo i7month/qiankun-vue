@@ -1,15 +1,23 @@
 <template>
-  <div id="app">
+  <div id="vueApp">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/vue">子项目跳路由/Vue</router-link> |
+      <router-link to="/about">子项目跳路由/About</router-link>
+      <div @click="$router.push('/')">回到主项目</div>
     </div>
     <router-view/>
   </div>
 </template>
+<script>
+
+export default {
+  methods:{
+  }
+}
+</script>
 
 <style>
-#app {
+#vueApp {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
