@@ -1,31 +1,57 @@
 <template>
   <div id="app">
-      <router-link to="/child/vue">路由跳转</router-link>
-      <br>
-      <a href="http://localhost:8081/#/child/vue">aa跳转</a>
-      <div id="container"></div>
+    <div v-show="!show">
+      <router-view></router-view>
+    </div>
+    <div id="container" v-show="show"></div>
   </div>
 </template>
+<script>
+import _ from "llo/utils";
+export default {
+  data() {
+    return {
+      show: false,
+    };
+  },
+  watch: {
+    $route(to) {
+      console.log(to);
+      if (to.path.includes("/child-")) {
+        this.show = true
+      }else {
+        this.show = false
+      }
+    },
+  },
+  mounted() {
+    if(this.$route.path.includes("/child-")) this.show = true
+    window.addEventListener(
+      "scroll",
+      this.$utils.throttle((props) => {
+        console.log(props);
+      }, 1000)
+    );
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.$utils.throttle());
+  },
+  methods: {
+    submit: _.throttle((props) => {
+      console.log(props);
+    }, 1000)
+  },
+};
+</script>
 
 <style>
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  min-height: 100vh;
+  position: relative;
 }
 </style>

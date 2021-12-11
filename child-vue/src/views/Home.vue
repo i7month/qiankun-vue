@@ -10,12 +10,15 @@
 export default {
   name: 'Home',
   methods: {
-    send (e) {
-      console.log(this.$msg.Confirm.error)
-      this.$msg.Confirm.success({
-        type:'success',
-        message:'成功'
-      })
+    send () {
+      this.$setGlobalState({
+        params: 123
+      });
+      // console.log(this.$msg.Confirm.error)
+      // this.$msg.Confirm.success({
+      //   type:'success',
+      //   message:'成功'
+      // })
       // this.$msg.Confirm.erroT({
       //   message: "确定同意该申请？",
       //   tips: "提示",

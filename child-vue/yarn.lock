@@ -5143,17 +5143,6 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.nlark.com/kind-of/download/kind-of-6.0.3.tgz"
   integrity sha1-B8BQNKbDSfoG4k+jWqdttFgM5N0=
 
-l-public-vue@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.npmjs.org/l-public-vue/-/l-public-vue-0.0.3.tgz#ddcc4cecd2675b70b66f89b60a256aaf287733bb"
-  integrity sha512-j0DhgzfxRqFi5fM2cIqVIvH7SV9hukC3wN4dOtygKNhsE7T/ydvAhsuMV5CX+kYLX+baBvSWJWsI/zG2/I+q+A==
-  dependencies:
-    core-js "^3.6.5"
-    vant "^2.12.33"
-    vue "^2.6.11"
-    vue-router "^3.2.0"
-    vuex "^3.4.0"
-
 launch-editor-middleware@^2.2.1:
   version "2.2.1"
   resolved "https://registry.nlark.com/launch-editor-middleware/download/launch-editor-middleware-2.2.1.tgz"
@@ -5181,6 +5170,18 @@ lines-and-columns@^1.1.6:
   version "1.1.6"
   resolved "https://registry.nlark.com/lines-and-columns/download/lines-and-columns-1.1.6.tgz"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
+
+llo@^0.1.0, llo@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.npmjs.org/llo/-/llo-0.1.5.tgz#492f47b84ac84055dfc9fd38799261d1769b709a"
+  integrity sha512-3rd2qGGrApl0jDOAN4duimsKZISSXSfRyiAsN36jGmghvz8KLEB/MZX6hEonHOgJbzI32iWK5qPMZnKKwpDUEg==
+  dependencies:
+    core-js "^3.6.5"
+    llo "^0.1.0"
+    vant "^2.12.33"
+    vue "^2.6.11"
+    vue-router "^3.2.0"
+    vuex "^3.4.0"
 
 loader-fs-cache@^1.0.0:
   version "1.0.3"
